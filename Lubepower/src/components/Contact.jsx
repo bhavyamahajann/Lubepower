@@ -29,21 +29,21 @@ const Contact = () => {
               <div className="contact__icon-box">📍</div>
               <div>
                 <strong>Address</strong>
-                <span>LubePower PVT LTD, Industrial Area, Punjab, India</span>
+                <span>LubePower PVT LTD, SCO 85-86, 1st Floor, 17D, Chandigarh, 160017, India</span>
               </div>
             </div>
             <div className="contact__item">
               <div className="contact__icon-box">📞</div>
               <div>
                 <strong>Phone</strong>
-                <span>+91 98765 43210</span>
+                <span>+91 99147-08800</span>
               </div>
             </div>
             <div className="contact__item">
               <div className="contact__icon-box">✉️</div>
               <div>
                 <strong>Email</strong>
-                <span>info@lubepower.in</span>
+                <span>customer@lubepower.in</span>
               </div>
             </div>
             <div className="contact__item">
@@ -87,11 +87,11 @@ const Contact = () => {
               <div className="form__row">
                 <div className="form__group">
                   <label>Phone Number *</label>
-                  <input type="tel" name="phone" placeholder="+91 98765 43210" value={form.phone} onChange={handleChange} required />
+                  <input type="tel" name="phone" placeholder="+91 99147-08800" value={form.phone} onChange={handleChange} required />
                 </div>
                 <div className="form__group">
                   <label>Email Address</label>
-                  <input type="email" name="email" placeholder="you@company.com" value={form.email} onChange={handleChange} />
+                  <input type="email" name="email" placeholder="Enter your email address" value={form.email} onChange={handleChange} />
                 </div>
               </div>
 
