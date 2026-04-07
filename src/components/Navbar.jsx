@@ -35,10 +35,10 @@ const Navbar = () => {
 
         <div className="navbar__actions">
           <a href={`tel:${PHONE_NUMBER}`} className="navbar__contact-link navbar__contact-link--phone" aria-label={`Call ${PHONE_LABEL}`}>
-            Call Now
+            📞 Call Now
           </a>
           <a href={`mailto:${EMAIL}`} className="navbar__contact-link navbar__contact-link--email" aria-label={`Email ${EMAIL}`}>
-            {EMAIL}
+            Mail Us
           </a>
           <a href="#contact" className="navbar__cta">
             Get a Quote
@@ -63,8 +63,8 @@ const Navbar = () => {
         <a href="#products" onClick={() => setMenuOpen(false)}>Products</a>
         <a href="#about" onClick={() => setMenuOpen(false)}>About</a>
         <a href="#contact" onClick={() => setMenuOpen(false)}>Contact</a>
-        <a href={`tel:${PHONE_NUMBER}`} onClick={() => setMenuOpen(false)}>Call: {PHONE_LABEL}</a>
-        <a href={`mailto:${EMAIL}`} onClick={() => setMenuOpen(false)}>{EMAIL}</a>
+        <a href={`tel:${PHONE_NUMBER}`} onClick={() => setMenuOpen(false)}>📞 Call Now: {PHONE_LABEL}</a>
+        <a href={`mailto:${EMAIL}`} onClick={() => setMenuOpen(false)}>Mail Us</a>
         <a href="#contact" className="mobile__cta" onClick={() => setMenuOpen(false)}>Get a Quote</a>
       </div>
     </nav>
