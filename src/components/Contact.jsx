@@ -91,7 +91,7 @@ const Contact = () => {
                 </div>
                 <div className="form__group">
                   <label>Email Address</label>
-                  <input type="email" name="email" placeholder="customer@lubepower.in" value={form.email} onChange={handleChange} />
+                  <input type="email" name="email" placeholder="Email address" value={form.email} onChange={handleChange} />
                 </div>
               </div>
 
