@@ -80,13 +80,13 @@
 import React, { useState } from "react";
 import "./Products.css";
 
-const categories = ["All", "Engine Oil", "Gear Oil", "Hydraulic Oil", "Synthetic Oil ", "Bike Engine Oil ", "Lubricant Oil", "Coolant Oil"];
+const categories = ["All", "Engine Oil", "Gear Oil", "Lubricating Grease Calcium", "Synthetic Oil ", "Bike Engine Oil ", "Lubricant Oil", "Coolant Oil"];
 
 const categoryIcons = {
   "All": "🛢️",
   "Engine Oil": "🔧",
   "Gear Oil": "⚙️",
-  "Hydraulic Oil": "💧",
+  "Lubricating Grease Calcium": "💧",
   "Synthetic Oil ": "🏭",
   "Bike Engine Oil ": "⭐",
   "Lubricant Oil": "🔩",
@@ -97,7 +97,7 @@ const categoryCounts = {
   "All": 16,
   "Engine Oil": 3,
   "Gear Oil": 2,
-  "Hydraulic Oil": 2,
+  "Lubricating Grease Calcium": 2,
   "Synthetic Oil ": 2,
   "Bike Engine Oil ": 3,
   "Lubricant Oil": 2,
@@ -107,7 +107,7 @@ const categoryCounts = {
 const categoryColors = {
   "Engine Oil": "#1a3a5c",
   "Gear Oil": "#2d5a27",
-  "Hydraulic Oil": "#1a4a6b",
+  "Lubricating Grease Calcium": "#1a4a6b",
   "Synthetic Oil ": "#5a3e1b",
   "Bike Engine Oil ": "#4a1a5c",
   "Lubricant Oil": "#3b3b1a",
@@ -120,8 +120,8 @@ const products = [
   { id: 3,  name: "LubePower Diesel HD",       category: "Engine Oil",       grade: "15W-40",  pack: "5L / 20L / 210L",   desc: "Heavy-duty diesel engine oil for commercial vehicles",             tag: "" },
   { id: 4,  name: "LubePower Gear EP",         category: "Synthetic Oil ",   grade: "EP 90",   pack: "1L / 5L / 20L",     desc: "Extreme pressure Synthetic Oil for manual transmissions",          tag: "" },
   { id: 5,  name: "LubePower Axle 140",        category: "Synthetic Oil ",   grade: "EP 140",  pack: "5L / 20L",          desc: "Heavy-duty axle and differential protection oil",                  tag: "Industrial" },
-  { id: 6,  name: "LubePower Hydro 46",        category: "Hydraulic Oil",    grade: "ISO 46",  pack: "20L / 210L",        desc: "Premium hydraulic oil for industrial machinery",                   tag: "Industrial" },
-  { id: 7,  name: "LubePower Hydro 68",        category: "Hydraulic Oil",    grade: "ISO 68",  pack: "20L / 210L",        desc: "High-viscosity hydraulic oil for heavy equipment",                 tag: "" },
+  { id: 6,  name: "LubePower Hydro 46",        category: "Lubricating Grease Calcium",    grade: "ISO 46",  pack: "20L / 210L",        desc: "Premium Lubricating Grease Calcium for industrial machinery",                   tag: "Industrial" },
+  { id: 7,  name: "LubePower Hydro 68",        category: "Lubricating Grease Calcium",    grade: "ISO 68",  pack: "20L / 210L",        desc: "High-viscosity Lubricating Grease Calcium for heavy equipment",                 tag: "" },
   { id: 8,  name: "LubePower MP Grease",       category: "Gear Oil",         grade: "NLGI 2",  pack: "500g / 1kg / 5kg",  desc: "Multi-purpose lithium grease for bearings & chassis",              tag: "Best Seller" },
   { id: 9,  name: "LubePower HT Grease",       category: "Gear Oil",         grade: "NLGI 3",  pack: "1kg / 5kg",         desc: "High-temperature grease for industrial applications",              tag: "" },
   { id: 10, name: "LubePower Cutting Oil",     category: "Bike Engine Oil ", grade: "—",       pack: "1L / 5L / 20L",     desc: "Premium cutting & tapping fluid for metal machining",              tag: "" },
