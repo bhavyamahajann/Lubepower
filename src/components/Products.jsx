@@ -80,55 +80,64 @@
 import React, { useState } from "react";
 import "./Products.css";
 
-const categories = ["All", "Engine Oil", "Gear Oil", "Hydraulic Oil", "Greases", "Specialty"];
+const categories = ["All", "Engine Oil", "Gear Oil", "Hydraulic Oil", "Synthetic Oil ", "Bike Engine Oil ", "Lubricant Oil", "Coolant Oil"];
 
 const categoryIcons = {
   "All": "🛢️",
   "Engine Oil": "🔧",
   "Gear Oil": "⚙️",
   "Hydraulic Oil": "💧",
-  "Greases": "🏭",
-  "Specialty": "⭐",
+  "Synthetic Oil ": "🏭",
+  "Bike Engine Oil ": "⭐",
+  "Lubricant Oil": "🔩",
+  "Coolant Oil": "❄️",
 };
 
 const categoryCounts = {
-  "All": 12,
+  "All": 16,
   "Engine Oil": 3,
   "Gear Oil": 2,
   "Hydraulic Oil": 2,
-  "Greases": 2,
-  "Specialty": 3,
+  "Synthetic Oil ": 2,
+  "Bike Engine Oil ": 3,
+  "Lubricant Oil": 2,
+  "Coolant Oil": 2,
 };
 
-// Product images using placeholder colors per category
 const categoryColors = {
   "Engine Oil": "#1a3a5c",
   "Gear Oil": "#2d5a27",
   "Hydraulic Oil": "#1a4a6b",
-  "Greases": "#5a3e1b",
-  "Specialty": "#4a1a5c",
+  "Synthetic Oil ": "#5a3e1b",
+  "Bike Engine Oil ": "#4a1a5c",
+  "Lubricant Oil": "#3b3b1a",
+  "Coolant Oil": "#1a4a4a",
 };
 
 const products = [
-  { id: 1, name: "LubePower Ultra 4T", category: "Engine Oil", grade: "20W-50", pack: "1L / 5L / 20L", desc: "High-performance 4-stroke engine oil for bikes & cars", tag: "Best Seller" },
-  { id: 2, name: "LubePower Synth Pro", category: "Engine Oil", grade: "5W-30", pack: "1L / 4L", desc: "Full synthetic formula for modern fuel-efficient engines", tag: "Premium" },
-  { id: 3, name: "LubePower Diesel HD", category: "Engine Oil", grade: "15W-40", pack: "5L / 20L / 210L", desc: "Heavy-duty diesel engine oil for commercial vehicles", tag: "" },
-  { id: 4, name: "LubePower Gear EP", category: "Gear Oil", grade: "EP 90", pack: "1L / 5L / 20L", desc: "Extreme pressure gear oil for manual transmissions", tag: "" },
-  { id: 5, name: "LubePower Axle 140", category: "Gear Oil", grade: "EP 140", pack: "5L / 20L", desc: "Heavy-duty axle and differential protection oil", tag: "Industrial" },
-  { id: 6, name: "LubePower Hydro 46", category: "Hydraulic Oil", grade: "ISO 46", pack: "20L / 210L", desc: "Premium hydraulic oil for industrial machinery", tag: "Industrial" },
-  { id: 7, name: "LubePower Hydro 68", category: "Hydraulic Oil", grade: "ISO 68", pack: "20L / 210L", desc: "High-viscosity hydraulic oil for heavy equipment", tag: "" },
-  { id: 8, name: "LubePower MP Grease", category: "Greases", grade: "NLGI 2", pack: "500g / 1kg / 5kg", desc: "Multi-purpose lithium grease for bearings & chassis", tag: "Best Seller" },
-  { id: 9, name: "LubePower HT Grease", category: "Greases", grade: "NLGI 3", pack: "1kg / 5kg", desc: "High-temperature grease for industrial applications", tag: "" },
-  { id: 10, name: "LubePower Cutting Oil", category: "Specialty", grade: "—", pack: "1L / 5L / 20L", desc: "Premium cutting & tapping fluid for metal machining", tag: "" },
-  { id: 11, name: "LubePower Rust Guard", category: "Specialty", grade: "—", pack: "500ml / 5L", desc: "Anti-rust & corrosion protection spray for metals", tag: "New" },
-  { id: 12, name: "LubePower Radiator Cool", category: "Specialty", grade: "—", pack: "1L / 5L", desc: "Long-life coolant for engines, prevents overheating", tag: "New" },
+  { id: 1,  name: "LubePower Ultra 4T",       category: "Engine Oil",       grade: "20W-50",  pack: "1L / 5L / 20L",    desc: "High-performance 4-stroke engine oil for bikes & cars",           tag: "Best Seller" },
+  { id: 2,  name: "LubePower Synth Pro",       category: "Engine Oil",       grade: "5W-30",   pack: "1L / 4L",           desc: "Full synthetic formula for modern fuel-efficient engines",         tag: "Premium" },
+  { id: 3,  name: "LubePower Diesel HD",       category: "Engine Oil",       grade: "15W-40",  pack: "5L / 20L / 210L",   desc: "Heavy-duty diesel engine oil for commercial vehicles",             tag: "" },
+  { id: 4,  name: "LubePower Gear EP",         category: "Synthetic Oil ",   grade: "EP 90",   pack: "1L / 5L / 20L",     desc: "Extreme pressure Synthetic Oil for manual transmissions",          tag: "" },
+  { id: 5,  name: "LubePower Axle 140",        category: "Synthetic Oil ",   grade: "EP 140",  pack: "5L / 20L",          desc: "Heavy-duty axle and differential protection oil",                  tag: "Industrial" },
+  { id: 6,  name: "LubePower Hydro 46",        category: "Hydraulic Oil",    grade: "ISO 46",  pack: "20L / 210L",        desc: "Premium hydraulic oil for industrial machinery",                   tag: "Industrial" },
+  { id: 7,  name: "LubePower Hydro 68",        category: "Hydraulic Oil",    grade: "ISO 68",  pack: "20L / 210L",        desc: "High-viscosity hydraulic oil for heavy equipment",                 tag: "" },
+  { id: 8,  name: "LubePower MP Grease",       category: "Gear Oil",         grade: "NLGI 2",  pack: "500g / 1kg / 5kg",  desc: "Multi-purpose lithium grease for bearings & chassis",              tag: "Best Seller" },
+  { id: 9,  name: "LubePower HT Grease",       category: "Gear Oil",         grade: "NLGI 3",  pack: "1kg / 5kg",         desc: "High-temperature grease for industrial applications",              tag: "" },
+  { id: 10, name: "LubePower Cutting Oil",     category: "Bike Engine Oil ", grade: "—",       pack: "1L / 5L / 20L",     desc: "Premium cutting & tapping fluid for metal machining",              tag: "" },
+  { id: 11, name: "LubePower Rust Guard",      category: "Bike Engine Oil ", grade: "—",       pack: "500ml / 5L",        desc: "Anti-rust & corrosion protection spray for metals",                tag: "New" },
+  { id: 12, name: "LubePower Radiator Cool",   category: "Bike Engine Oil ", grade: "—",       pack: "1L / 5L",           desc: "Long-life coolant for engines, prevents overheating",              tag: "New" },
+  { id: 13, name: "LubePower Lubricant Oil",   category: "Lubricant Oil",    grade: "SAE 20",  pack: "1L / 5L / 20L",     desc: "Multi-purpose lubricating oil for smooth engine performance",      tag: "New" },
+  { id: 14, name: "LubePower Industrial Lube", category: "Lubricant Oil",    grade: "SAE 40",  pack: "5L / 20L",          desc: "Heavy-duty industrial lubricant for machinery & equipment",        tag: "Industrial" },
+  { id: 15, name: "LubePower Coolant Oil",     category: "Coolant Oil",      grade: "—",       pack: "1L / 5L",           desc: "Advanced coolant oil to prevent engine overheating",               tag: "New" },
+  { id: 16, name: "LubePower Arctic Cool",     category: "Coolant Oil",      grade: "—",       pack: "1L / 5L / 20L",     desc: "Long-life radiator coolant for extreme temperature protection",     tag: "Premium" },
 ];
 
 const tagColors = {
   "Best Seller": { bg: "#e8f4fd", color: "#1565c0", border: "#1565c0" },
-  "Premium": { bg: "#fff8e1", color: "#f57f17", border: "#f57f17" },
-  "Industrial": { bg: "#e8f5e9", color: "#2e7d32", border: "#2e7d32" },
-  "New": { bg: "#fce4ec", color: "#c62828", border: "#c62828" },
+  "Premium":     { bg: "#fff8e1", color: "#f57f17", border: "#f57f17" },
+  "Industrial":  { bg: "#e8f5e9", color: "#2e7d32", border: "#2e7d32" },
+  "New":         { bg: "#fce4ec", color: "#c62828", border: "#c62828" },
 };
 
 const Products = () => {
@@ -137,7 +146,8 @@ const Products = () => {
 
   const filtered = products.filter(p => {
     const matchCat = active === "All" || p.category === active;
-    const matchSearch = p.name.toLowerCase().includes(search.toLowerCase()) ||
+    const matchSearch =
+      p.name.toLowerCase().includes(search.toLowerCase()) ||
       p.desc.toLowerCase().includes(search.toLowerCase());
     return matchCat && matchSearch;
   });
@@ -207,17 +217,19 @@ const Products = () => {
                 const bgColor = categoryColors[product.category] || "#1a3a5c";
                 return (
                   <div className="product__card" key={product.id}>
-                    {/* Product Image Area */}
                     <div className="product__image" style={{ background: bgColor }}>
                       {product.tag && (
                         <span
                           className="product__tag"
-                          style={{ background: tagStyle.bg, color: tagStyle.color, border: `1px solid ${tagStyle.border}` }}
+                          style={{
+                            background: tagStyle.bg,
+                            color: tagStyle.color,
+                            border: `1px solid ${tagStyle.border}`,
+                          }}
                         >
                           {product.tag}
                         </span>
                       )}
-                      {/* Oil bottle SVG placeholder */}
                       <div className="product__bottle">
                         <svg viewBox="0 0 80 120" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <rect x="28" y="8" width="24" height="10" rx="3" fill="rgba(255,255,255,0.3)"/>
@@ -232,7 +244,6 @@ const Products = () => {
                       </div>
                     </div>
 
-                    {/* Product Info */}
                     <div className="product__info">
                       <span className="product__category-label">{product.category}</span>
                       <h3 className="product__name">{product.name}</h3>
