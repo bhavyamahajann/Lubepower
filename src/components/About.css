@@ -644,6 +644,22 @@
   font-size: 15px; color: #666; line-height: 1.8; margin: 0 0 14px;
 }
 
+.about__hero-image-wrap {
+  margin: 18px 0 24px;
+  background: linear-gradient(180deg, #ffffff 0%, #f9fafc 100%);
+  border: 1px solid #e6ebf2;
+  border-radius: 18px;
+  padding: 18px;
+  box-shadow: 0 12px 30px rgba(13, 27, 42, 0.08);
+}
+
+.about__hero-image {
+  width: 100%;
+  max-height: 320px;
+  object-fit: contain;
+  display: block;
+}
+
 /* Timeline */
 .about__timeline {
   margin-top: 32px; position: relative; padding-left: 28px;

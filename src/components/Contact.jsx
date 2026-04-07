@@ -1,6 +1,35 @@
 import React, { useState } from "react";
 import "./Contact.css";
 
+const contactInfo = [
+  {
+    title: "Address",
+    value: "LubePower PVT LTD, SCO 85-86, 1st Floor, 17D, Chandigarh, 160017, India",
+    icon: "\uD83D\uDCCD",
+  },
+  {
+    title: "Phone",
+    value: "+91 99147-08800",
+    icon: "\uD83D\uDCDE",
+  },
+  {
+    title: "Email",
+    value: "customer@lubepower.in",
+    icon: "\u2709\uFE0F",
+  },
+  {
+    title: "Working Hours",
+    value: "Mon-Sat: 9:00 AM - 6:00 PM",
+    icon: "\u23F0",
+  },
+];
+
+const supportPoints = [
+  { title: "Bulk Order Support", text: "Dealer pricing, fleet requirements, and industrial volume planning." },
+  { title: "Product Selection Help", text: "Guidance for engine oils, greases, hydraulic oils, and coolants." },
+  { title: "Fast Response Team", text: "We respond quickly with product fit, pricing guidance, and next steps." },
+];
+
 const Contact = () => {
   const [form, setForm] = useState({ name: "", company: "", phone: "", email: "", product: "", message: "" });
   const [sent, setSent] = useState(false);
@@ -15,56 +44,46 @@ const Contact = () => {
   return (
     <section className="contact" id="contact">
       <div className="contact__container">
-        {/* Left Info */}
         <div className="contact__info">
           <span className="section__eyebrow--light">Get In Touch</span>
           <h2 className="contact__title">Let's Talk <span>Business</span></h2>
           <p className="contact__desc">
-            Looking for bulk orders, dealership opportunities, or product consultation? 
+            Looking for bulk orders, dealership opportunities, or product consultation?
             Our team is ready to assist you.
           </p>
 
+          <div className="contact__support-grid">
+            {supportPoints.map((item) => (
+              <div className="contact__support-card" key={item.title}>
+                <h3>{item.title}</h3>
+                <p>{item.text}</p>
+              </div>
+            ))}
+          </div>
+
           <div className="contact__details">
-            <div className="contact__item">
-              <div className="contact__icon-box">📍</div>
-              <div>
-                <strong>Address</strong>
-                <span>LubePower PVT LTD, SCO 85-86, 1st Floor, 17D, Chandigarh, 160017, India</span>
+            {contactInfo.map((item) => (
+              <div className="contact__item" key={item.title}>
+                <div className="contact__icon-box">{item.icon}</div>
+                <div>
+                  <strong>{item.title}</strong>
+                  <span>{item.value}</span>
+                </div>
               </div>
-            </div>
-            <div className="contact__item">
-              <div className="contact__icon-box">📞</div>
-              <div>
-                <strong>Phone</strong>
-                <span>+91 99147-08800</span>
-              </div>
-            </div>
-            <div className="contact__item">
-              <div className="contact__icon-box">✉️</div>
-              <div>
-                <strong>Email</strong>
-                <span>customer@lubepower.in</span>
-              </div>
-            </div>
-            <div className="contact__item">
-              <div className="contact__icon-box">⏰</div>
-              <div>
-                <strong>Working Hours</strong>
-                <span>Mon–Sat: 9:00 AM – 6:00 PM</span>
-              </div>
-            </div>
+            ))}
           </div>
 
           <div className="contact__social">
-            <a href="#" className="social__btn">WhatsApp Us</a>
+            <a href="https://wa.me/919914708800?text=Hi" className="social__btn" target="_blank" rel="noreferrer">
+              WhatsApp Us
+            </a>
           </div>
         </div>
 
-        {/* Right Form */}
         <div className="contact__form-wrap">
           {sent ? (
             <div className="form__success">
-              <span className="success__icon">✅</span>
+              <span className="success__icon">&#9989;</span>
               <h3>Message Sent!</h3>
               <p>Thank you! Our team will contact you within 24 hours.</p>
               <button onClick={() => setSent(false)} className="form__reset">Send Another</button>
@@ -110,10 +129,10 @@ const Contact = () => {
 
               <div className="form__group">
                 <label>Message</label>
-                <textarea name="message" placeholder="Tell us about your requirements — quantity, grade, delivery location..." rows={4} value={form.message} onChange={handleChange}></textarea>
+                <textarea name="message" placeholder="Tell us about your requirements - quantity, grade, delivery location..." rows={4} value={form.message} onChange={handleChange}></textarea>
               </div>
 
-              <button type="submit" className="form__submit">Send Enquiry →</button>
+              <button type="submit" className="form__submit">Send Enquiry &rarr;</button>
             </form>
           )}
         </div>
