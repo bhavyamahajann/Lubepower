@@ -87,11 +87,11 @@ const Contact = () => {
               <div className="form__row">
                 <div className="form__group">
                   <label>Phone Number *</label>
-                  <input type="tel" name="phone" placeholder="+91 98765 43210" value={form.phone} onChange={handleChange} required />
+                  <input type="tel" name="phone" placeholder="+91 99147-08800" value={form.phone} onChange={handleChange} required />
                 </div>
                 <div className="form__group">
                   <label>Email Address</label>
-                  <input type="email" name="email" placeholder="you@company.com" value={form.email} onChange={handleChange} />
+                  <input type="email" name="email" placeholder="customer@lubepower.in" value={form.email} onChange={handleChange} />
                 </div>
               </div>
 
