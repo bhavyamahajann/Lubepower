@@ -29,21 +29,21 @@ const Contact = () => {
               <div className="contact__icon-box">📍</div>
               <div>
                 <strong>Address</strong>
-                <span>LubePower PVT LTD, Industrial Area, Punjab, India</span>
+                <span>LubePower PVT LTD, SCO 85-86, 1st Floor, 17D, Chandigarh, 160017, India</span>
               </div>
             </div>
             <div className="contact__item">
               <div className="contact__icon-box">📞</div>
               <div>
                 <strong>Phone</strong>
-                <span>+91 98765 43210</span>
+                <span>+91 99147-08800</span>
               </div>
             </div>
             <div className="contact__item">
               <div className="contact__icon-box">✉️</div>
               <div>
                 <strong>Email</strong>
-                <span>info@lubepower.in</span>
+                <span>customer@lubepower.in</span>
               </div>
             </div>
             <div className="contact__item">
