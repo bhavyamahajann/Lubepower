@@ -80,7 +80,7 @@
 import React, { useState } from "react";
 import "./Products.css";
 
-const categories = ["All", "Engine Oil", "Gear Oil", "Lubricating Grease Calcium", "Synthetic Oil ", "Bike Engine Oil ", "Lubricant Oil", "Coolant Oil"];
+const categories = ["All", "Engine Oil", "Gear Oil", "Lubricating Grease Calcium", "Synthetic Oil ", "Bike Engine Oil ", "Lubricating Oil ", "Coolant Oil"];
 
 const categoryIcons = {
   "All": "🛢️",
@@ -89,7 +89,7 @@ const categoryIcons = {
   "Lubricating Grease Calcium": "💧",
   "Synthetic Oil ": "🏭",
   "Bike Engine Oil ": "⭐",
-  "Lubricant Oil": "🔩",
+  "Lubricating Oil ": "🔩",
   "Coolant Oil": "❄️",
 };
 
@@ -100,7 +100,7 @@ const categoryCounts = {
   "Lubricating Grease Calcium": 2,
   "Synthetic Oil ": 2,
   "Bike Engine Oil ": 3,
-  "Lubricant Oil": 2,
+  "Lubricating Oil ": 2,
   "Coolant Oil": 2,
 };
 
@@ -110,7 +110,7 @@ const categoryColors = {
   "Lubricating Grease Calcium": "#1a4a6b",
   "Synthetic Oil ": "#5a3e1b",
   "Bike Engine Oil ": "#4a1a5c",
-  "Lubricant Oil": "#3b3b1a",
+  "Lubricating Oil ": "#3b3b1a",
   "Coolant Oil": "#1a4a4a",
 };
 
@@ -127,8 +127,8 @@ const products = [
   { id: 10, name: "LubePower Cutting Oil",     category: "Bike Engine Oil ", grade: "—",       pack: "1L / 5L / 20L",     desc: "Premium cutting & tapping fluid for metal machining",              tag: "" },
   { id: 11, name: "LubePower Rust Guard",      category: "Bike Engine Oil ", grade: "—",       pack: "500ml / 5L",        desc: "Anti-rust & corrosion protection spray for metals",                tag: "New" },
   { id: 12, name: "LubePower Radiator Cool",   category: "Bike Engine Oil ", grade: "—",       pack: "1L / 5L",           desc: "Long-life coolant for engines, prevents overheating",              tag: "New" },
-  { id: 13, name: "LubePower Lubricant Oil",   category: "Lubricant Oil",    grade: "SAE 20",  pack: "1L / 5L / 20L",     desc: "Multi-purpose lubricating oil for smooth engine performance",      tag: "New" },
-  { id: 14, name: "LubePower Industrial Lube", category: "Lubricant Oil",    grade: "SAE 40",  pack: "5L / 20L",          desc: "Heavy-duty industrial lubricant for machinery & equipment",        tag: "Industrial" },
+  { id: 13, name: "LubePower Lubricating Oil ",   category: "Lubricating Oil ",    grade: "SAE 20",  pack: "1L / 5L / 20L",     desc: "Multi-purpose lubricating oil for smooth engine performance",      tag: "New" },
+  { id: 14, name: "LubePower Industrial Lube", category: "Lubricating Oil ",    grade: "SAE 40",  pack: "5L / 20L",          desc: "Heavy-duty industrial lubricanting for machinery & equipment",        tag: "Industrial" },
   { id: 15, name: "LubePower Coolant Oil",     category: "Coolant Oil",      grade: "—",       pack: "1L / 5L",           desc: "Advanced coolant oil to prevent engine overheating",               tag: "New" },
   { id: 16, name: "LubePower Arctic Cool",     category: "Coolant Oil",      grade: "—",       pack: "1L / 5L / 20L",     desc: "Long-life radiator coolant for extreme temperature protection",     tag: "Premium" },
 ];
