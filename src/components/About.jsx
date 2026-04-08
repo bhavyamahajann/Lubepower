@@ -56,15 +56,18 @@ const About = () => {
     <section className="about" id="about">
       <div className="about__container">
         <div className="about__visual">
+
+          {/* FIXED: stats grid is now INSIDE bg-panel */}
           <div className="about__panel-wrap">
-            <div className="about__bg-panel"></div>
-            <div className="about__stats-grid">
-              {stats.map((s) => (
-                <div className="about__stat-card" key={s.label}>
-                  <span className="stat__value">{s.value}</span>
-                  <span className="stat__label">{s.label}</span>
-                </div>
-              ))}
+            <div className="about__bg-panel">
+              <div className="about__stats-grid">
+                {stats.map((s) => (
+                  <div className="about__stat-card" key={s.label}>
+                    <span className="stat__value">{s.value}</span>
+                    <span className="stat__label">{s.label}</span>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
 
