@@ -20,8 +20,8 @@
 }
 
 .footer__logo-img {
-  height: 52px;
-  width: auto;
+  height: 100px;
+  width: 150px;
   object-fit: contain;
 }
 
