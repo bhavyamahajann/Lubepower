@@ -498,6 +498,7 @@
   to { opacity: 1; transform: translateX(0); }
 }
 
+/* ===== TABLET (max-width: 900px) ===== */
 @media (max-width: 900px) {
   .hero__container {
     grid-template-columns: 1fr;
@@ -528,13 +529,22 @@
     grid-template-columns: repeat(2, 1fr);
   }
 
+  /* FIX: order: -1 hataya — yahi card ko content ke upar le jaata tha */
   .hero__visual {
-    order: -1;
+    width: 100%;
   }
 
+  /* FIX: visual stack centering */
+  .hero__visual-stack {
+    align-items: center;
+    width: 100%;
+  }
+
+  /* FIX: fixed width hataya, responsive width diya */
   .visual__card {
-    width: 280px;
-    height: 320px;
+    width: 100%;
+    max-width: 340px;
+    height: 280px;
   }
 
   .hero__trust-card {
@@ -553,6 +563,7 @@
   }
 }
 
+/* ===== MOBILE (max-width: 500px) ===== */
 @media (max-width: 500px) {
   .hero {
     min-height: auto;
@@ -568,6 +579,11 @@
 
   .hero__stats {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* FIX: chhoti screen pe card aur chhota */
+  .visual__card {
+    height: 240px;
   }
 
   .feature {
