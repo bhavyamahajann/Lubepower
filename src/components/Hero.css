@@ -218,7 +218,7 @@
   animation: fadeUp 0.7s ease 0.4s both;
 }
 
-.stat {
+.hero__stats .stat {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -228,27 +228,28 @@
   transition: background 0.2s;
 }
 
-.stat:last-child {
+.hero__stats .stat:last-child {
   border-right: none;
 }
 
-.stat:hover {
+.hero__stats .stat:hover {
   background: rgba(176, 30, 22, 0.04);
 }
 
-.stat__value {
+/* ✅ FIX: .hero__stats ke andar specific — About.css override nahi karega */
+.hero__stats .stat__value {
   font-family: 'Barlow Condensed', sans-serif;
   font-weight: 800;
   font-size: 26px;
-  color: var(--red);
+  color: #b01e16 !important;
   line-height: 1;
 }
 
-.stat__label {
+.hero__stats .stat__label {
   font-family: 'Barlow', sans-serif;
   font-size: 11px;
-  font-weight: 600;
-  color: #777;
+  font-weight: 700;
+  color: #154485 !important;
   text-transform: uppercase;
   letter-spacing: 0.5px;
   text-align: center;
@@ -529,18 +530,15 @@
     grid-template-columns: repeat(2, 1fr);
   }
 
-  /* FIX: order: -1 hataya — yahi card ko content ke upar le jaata tha */
   .hero__visual {
     width: 100%;
   }
 
-  /* FIX: visual stack centering */
   .hero__visual-stack {
     align-items: center;
     width: 100%;
   }
 
-  /* FIX: fixed width hataya, responsive width diya */
   .visual__card {
     width: 100%;
     max-width: 340px;
@@ -581,7 +579,6 @@
     grid-template-columns: repeat(2, 1fr);
   }
 
-  /* FIX: chhoti screen pe card aur chhota */
   .visual__card {
     height: 240px;
   }
