@@ -48,7 +48,7 @@ const Hero = () => {
         <div className="hero__content">
           <div className="hero__badge">
             <span className="badge__dot"></span>
-            India's Trusted Lubricant Brand
+           India’s Most Reliable Engine Oil Brand
           </div>
 
           <h1 className="hero__title">
