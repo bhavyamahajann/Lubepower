@@ -3,16 +3,20 @@ import "./Footer.css";
 import logo from "../assets/logo.png";
 
 const badges = [
-  "\uD83C\uDFC6 ISO 9001:2015",
-  "\uD83C\uDDEE\uD83C\uDDF3 Made in India",
+  "🏆 ISO 9001:2015",
+  "🇮🇳 Made in India",
 ];
 
 const contactItems = [
-  "\uD83D\uDCCD SCO 85-86, 1st Floor, 17D, Chandigarh, 160017",
-  "\uD83D\uDCDE +91 99147-08800",
-  "\u2709\uFE0F customer@lubepower.in",
-  "\u23F0 Mon-Sat: 9AM - 6PM",
+  "📍 SCO 85-86, 1st Floor, 17D, Chandigarh, 160017",
+  "📞 +91 99147-08800",
+  "✉️ customer@lubepower.in",
+  "⏰ Mon-Sat: 9AM - 6PM",
 ];
+
+const scrollTo = (id) => {
+  document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+};
 
 const Footer = () => {
   return (
@@ -40,24 +44,24 @@ const Footer = () => {
         <div className="footer__links-group">
           <h4>Quick Links</h4>
           <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#products">Products</a></li>
-            <li><a href="#about">About Us</a></li>
-            <li><a href="#why-us">Why LubePower</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a onClick={() => scrollTo("home")} style={{cursor:"pointer"}}>Home</a></li>
+            <li><a onClick={() => scrollTo("products")} style={{cursor:"pointer"}}>Products</a></li>
+            <li><a onClick={() => scrollTo("about")} style={{cursor:"pointer"}}>About Us</a></li>
+            <li><a onClick={() => scrollTo("why-us")} style={{cursor:"pointer"}}>Why LubePower</a></li>
+            <li><a onClick={() => scrollTo("contact")} style={{cursor:"pointer"}}>Contact</a></li>
           </ul>
         </div>
 
         <div className="footer__links-group">
           <h4>Products</h4>
           <ul>
-            <li><a href="#products">Engine Oil</a></li>
-            <li><a href="#products">Gear Oil</a></li>
-            <li><a href="#products">Lubricating Grease Calcium</a></li>
-            <li><a href="#products">Synthetic Oil</a></li>
-            <li><a href="#products">Bike Engine Oil</a></li>
-            <li><a href="#products">Lubricating Oil</a></li>
-            <li><a href="#products">Coolant Oil</a></li>
+            <li><a onClick={() => scrollTo("products")} style={{cursor:"pointer"}}>Engine Oil</a></li>
+            <li><a onClick={() => scrollTo("products")} style={{cursor:"pointer"}}>Gear Oil</a></li>
+            <li><a onClick={() => scrollTo("products")} style={{cursor:"pointer"}}>Lubricating Grease Calcium</a></li>
+            <li><a onClick={() => scrollTo("products")} style={{cursor:"pointer"}}>Synthetic Oil</a></li>
+            <li><a onClick={() => scrollTo("products")} style={{cursor:"pointer"}}>Bike Engine Oil</a></li>
+            <li><a onClick={() => scrollTo("products")} style={{cursor:"pointer"}}>Lubricating Oil</a></li>
+            <li><a onClick={() => scrollTo("products")} style={{cursor:"pointer"}}>Coolant Oil</a></li>
           </ul>
         </div>
 
@@ -74,8 +78,8 @@ const Footer = () => {
       <div className="footer__bottom">
         <span>&copy; 2026 LubePower PVT LTD. All rights reserved.</span>
         <div className="footer__bottom-links">
-          <a href="#">Privacy Policy</a>
-          <a href="#">Terms of Service</a>
+          <a onClick={() => scrollTo("home")} style={{cursor:"pointer"}}>Privacy Policy</a>
+          <a onClick={() => scrollTo("home")} style={{cursor:"pointer"}}>Terms of Service</a>
         </div>
       </div>
     </footer>
