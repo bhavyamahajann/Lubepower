@@ -20,9 +20,10 @@
 }
 
 .footer__logo-img {
-  height: 100px;
-  width: 150px;
+  height: 140px;
+  width: 170px;
   object-fit: contain;
+  margin-left: -3em;
 }
 
 .footer__logo-text {
