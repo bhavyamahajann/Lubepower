@@ -2,12 +2,10 @@
 
 import React, { useState } from "react";
 import "./Products.css";
-import imgCushion from "../assets/MAX.png";
-import imgHD from "../assets/lube_shakti_hd.png";
-import imgPrince5ltr from "../assets/lube_shakti_prince_5ltr.png";
-import imgPrince from "../assets/lube_shakti_prince.png";
-import imgGreese from "../assets/Greese.webp";
-import imgLpShakti from "../assets/Lpgreese.png";
+import imgSyntheticlp from "../assets/Syntheticlp.png";
+import imgSyntheticmax from "../assets/syntheticmax.png";
+import imgworldridelp from "../assets/worldridelp.png";
+import imgworldridemax from "../assets/worldridemax.png";
 
 const categories = ["All", "WORLD RIDE", "SMOOTH PRO WORLD PRO", "SMOOTHX", "WORLD POWER", "PREMIUM ", "RIDE PLUS ", "ULTRA RIDE / TURBO POWER","SYNTHETIC X"];
 
@@ -25,32 +23,48 @@ const categoryIcons = {
 
 const categoryCounts = {
   "All": 16,
-  "Engine Oil": 3,
-  "Gear Oil": 2,
-  "Lubricating Grease Calcium": 2,
-  "Synthetic Oil ": 2,
-  "Bike Engine Oil ": 3,
-  "Lubricating Oil ": 2,
-  "Coolant Oil": 2,
+  "WORLD RIDE": 2,
+  "SMOOTH PRO WORLD PRO": 2,
+  "SMOOTHX": 2,
+  "WORLD POWER": 2,
+  "PREMIUM ": 2,
+  "RIDE PLUS ": 2,
+  "ULTRA RIDE / TURBO POWER": 2,
+  "SYNTHETIC X": 2,
 };
 
 const products = [
-  { id: 1, name: "LubePower Ultra 4T", category: "Engine Oil", grade: "20W-50", pack: "1L / 5L / 20L", desc: "High-performance 4-stroke engine oil for bikes and cars", tag: "Best Seller", image: imgPrince },
-  { id: 2, name: "LubePower Synth Pro", category: "Engine Oil", grade: "5W-30", pack: "1L / 4L", desc: "Full synthetic formula for modern fuel-efficient engines", tag: "Premium", image: imgPrince5ltr },
-  { id: 3, name: "LubePower Diesel HD", category: "Engine Oil", grade: "15W-40", pack: "5L / 20L / 210L", desc: "Heavy-duty diesel engine oil for commercial vehicles", tag: "", image: imgHD },
-  { id: 4, name: "LubePower Gear EP", category: "Synthetic Oil ", grade: "EP 90", pack: "1L / 5L / 20L", desc: "Extreme pressure gear oil for manual transmissions", tag: "", image: imgPrince },
-  { id: 5, name: "LubePower Axle 140", category: "Synthetic Oil ", grade: "EP 140", pack: "5L / 20L", desc: "Heavy-duty axle and differential protection oil", tag: "Industrial", image: imgHD },
-  { id: 6, name: "LubePower Hydro 46", category: "Lubricating Grease Calcium", grade: "ISO 46", desc: "Premium hydraulic support for industrial machinery", tag: "Industrial", image: imgGreese },
-  { id: 7, name: "LubePower Hydro 68", category: "Lubricating Grease Calcium", grade: "ISO 68", pack: "20L / 210L", desc: "High-viscosity lubrication for heavy equipment", tag: "", image: imgLpShakti },
-  { id: 8, name: "LubePower MP Grease", category: "Gear Oil", grade: "NLGI 2", pack: "500g / 1kg / 5kg", desc: "Multi-purpose lithium grease for bearings and chassis", tag: "Best Seller", image: imgPrince5ltr },
-  { id: 9, name: "LubePower HT Grease", category: "Gear Oil", grade: "NLGI 3", pack: "1kg / 5kg", desc: "High-temperature grease for industrial applications", tag: "", image: imgPrince },
-  { id: 10, name: "LubePower Cutting Oil", category: "Bike Engine Oil ", grade: "-", pack: "1L / 5L / 20L", desc: "Premium cutting and tapping fluid for metal machining", tag: "", image: imgHD },
-  { id: 11, name: "LubePower Rust Guard", category: "Bike Engine Oil ", grade: "-", pack: "500ml / 5L", desc: "Anti-rust and corrosion protection spray for metals", tag: "New", image: imgPrince5ltr },
-  { id: 12, name: "LubePower Radiator Cool", category: "Bike Engine Oil ", grade: "-", pack: "1L / 5L", desc: "Long-life coolant for engines that prevents overheating", tag: "New", image: imgCushion },
-  { id: 13, name: "LubePower Lubricating Oil", category: "Lubricating Oil ", grade: "SAE 20", pack: "1L / 5L / 20L", desc: "Multi-purpose lubricating oil for smooth engine performance", tag: "New", image: imgPrince },
-  { id: 14, name: "LubePower Industrial Lube", category: "Lubricating Oil ", grade: "SAE 40", pack: "5L / 20L", desc: "Heavy-duty lubrication for machinery and equipment", tag: "Industrial", image: imgHD },
-  { id: 15, name: "LubePower Coolant Oil", category: "Coolant Oil", grade: "-", pack: "1L / 5L", desc: "Advanced coolant oil to prevent engine overheating", tag: "New", image: imgPrince5ltr },
-  { id: 16, name: "LubePower Arctic Cool", category: "Coolant Oil", grade: "-", pack: "1L / 5L / 20L", desc: "Long-life radiator coolant for extreme temperature protection", tag: "Premium", image: imgCushion },
+  // WORLD RIDE
+  { id: 1, name: "World Ride 4T", category: "WORLD RIDE", grade: "20W-50", pack: "1L / 5L / 20L", desc: "High-performance 4-stroke engine oil for bikes and cars", tag: "Best Seller", image: imgworldridelp },
+  { id: 2, name: "World Ride Pro", category: "WORLD RIDE", grade: "10W-30", pack: "1L / 4L", desc: "Advanced engine protection for everyday bike riding", tag: "New", image: imgworldridemax },
+
+  // SMOOTH PRO WORLD PRO
+  { id: 3, name: "Smooth Pro 4T", category: "SMOOTH PRO WORLD PRO", grade: "20W-40", pack: "1L / 5L", desc: "Smooth performance engine oil for 4-stroke bikes", tag: "Best Seller", image: imgSyntheticlp },
+  { id: 4, name: "World Pro HD", category: "SMOOTH PRO WORLD PRO", grade: "15W-40", pack: "1L / 5L / 20L", desc: "Heavy-duty pro engine oil for commercial vehicles", tag: "", image: imgSyntheticmax },
+
+  // SMOOTHX
+  { id: 5, name: "SmoothX Ultra", category: "SMOOTHX", grade: "10W-40", pack: "1L / 4L", desc: "Ultra smooth synthetic blend for high-rev engines", tag: "Premium", image: imgworldridelp },
+  { id: 6, name: "SmoothX Pro", category: "SMOOTHX", grade: "5W-40", pack: "1L / 5L", desc: "Premium protection for modern fuel-efficient engines", tag: "", image: imgworldridemax },
+
+  // WORLD POWER
+  { id: 7, name: "World Power Diesel", category: "WORLD POWER", grade: "15W-40", pack: "5L / 20L / 210L", desc: "Heavy-duty diesel engine oil for trucks and fleets", tag: "Industrial", image: imgSyntheticlp },
+  { id: 8, name: "World Power CNG", category: "WORLD POWER", grade: "20W-50", pack: "1L / 5L", desc: "Specially formulated oil for CNG and LPG vehicles", tag: "", image: imgSyntheticmax },
+
+  // PREMIUM
+  { id: 9, name: "Premium Gold 4T", category: "PREMIUM ", grade: "10W-30", pack: "1L / 4L", desc: "Gold-grade premium oil for high-performance bikes", tag: "Premium", image: imgworldridelp },
+  { id: 10, name: "Premium Elite", category: "PREMIUM ", grade: "5W-30", pack: "1L / 4L", desc: "Elite engine protection for luxury and sports cars", tag: "Best Seller", image: imgworldridemax },
+
+  // RIDE PLUS
+  { id: 11, name: "Ride Plus 4T", category: "RIDE PLUS ", grade: "20W-40", pack: "1L / 5L", desc: "Reliable everyday engine oil for commuter bikes", tag: "", image: imgSyntheticlp },
+  { id: 12, name: "Ride Plus Extra", category: "RIDE PLUS ", grade: "20W-50", pack: "1L / 5L / 20L", desc: "Extra protection engine oil for long-distance rides", tag: "New", image: imgSyntheticmax },
+
+  // ULTRA RIDE / TURBO POWER
+  { id: 13, name: "Ultra Ride 4T", category: "ULTRA RIDE / TURBO POWER", grade: "10W-40", pack: "1L / 4L", desc: "Ultra-grade oil for high-speed performance bikes", tag: "Premium", image: imgworldridelp },
+  { id: 14, name: "Turbo Power Diesel", category: "ULTRA RIDE / TURBO POWER", grade: "15W-40", pack: "5L / 20L", desc: "Turbo-charged diesel protection for commercial engines", tag: "Industrial", image: imgworldridemax },
+
+  // SYNTHETIC X
+  { id: 15, name: "Synthetic X LP", category: "SYNTHETIC X", grade: "5W-30", pack: "1L / 4L", desc: "Full synthetic low-viscosity oil for modern engines", tag: "Premium", image: imgSyntheticlp },
+  { id: 16, name: "Synthetic X Max", category: "SYNTHETIC X", grade: "0W-20", pack: "1L / 4L", desc: "Maximum protection full synthetic engine oil", tag: "New", image: imgSyntheticmax },
 ];
 
 const tagColors = {
