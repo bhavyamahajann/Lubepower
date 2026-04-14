@@ -6,6 +6,8 @@ import imgSyntheticlp from "../assets/Syntheticlp.png";
 import imgSyntheticmax from "../assets/syntheticmax.png";
 import imgworldridelp from "../assets/worldridelp.png";
 import imgworldridemax from "../assets/worldridemax.png";
+import imgsmoothworldpromax from "../assets/smoothworldpromax.png";
+import imgsmoothworldprolp from "../assets/smoothworldprolp.png";
 
 const categories = ["All", "WORLD RIDE", "SMOOTH PRO WORLD PRO", "SMOOTHX", "WORLD POWER", "PREMIUM ", "RIDE PLUS ", "ULTRA RIDE / TURBO POWER","SYNTHETIC X"];
 
@@ -35,12 +37,12 @@ const categoryCounts = {
 
 const products = [
   // WORLD RIDE
-  { id: 1, name: "World Ride 4T", category: "WORLD RIDE", grade: "20W-50", pack: "1L / 5L / 20L", desc: "High-performance 4-stroke engine oil for bikes and cars", tag: "Best Seller", image: imgworldridelp },
-  { id: 2, name: "World Ride Pro", category: "WORLD RIDE", grade: "10W-30", pack: "1L / 4L", desc: "Advanced engine protection for everyday bike riding", tag: "New", image: imgworldridemax },
+  { id: 1, name: "World Ride 4T", category: "WORLD RIDE", grade: "20W-40", pack: "900ml", desc: "High-performance 4-stroke engine oil for bikes and cars", tag: "Best Seller", image: imgworldridelp },
+  { id: 2, name: "World Ride Pro", category: "WORLD RIDE", grade: "20W-40", pack: "900ml", desc: "Advanced engine protection for everyday bike riding", tag: "New", image: imgworldridemax },
 
   // SMOOTH PRO WORLD PRO
-  { id: 3, name: "Smooth Pro 4T", category: "SMOOTH PRO WORLD PRO", grade: "20W-40", pack: "1L / 5L", desc: "Smooth performance engine oil for 4-stroke bikes", tag: "Best Seller", image: imgSyntheticlp },
-  { id: 4, name: "World Pro HD", category: "SMOOTH PRO WORLD PRO", grade: "15W-40", pack: "1L / 5L / 20L", desc: "Heavy-duty pro engine oil for commercial vehicles", tag: "", image: imgSyntheticmax },
+  { id: 3, name: "Smooth Pro 4T", category: "SMOOTH PRO WORLD PRO", grade: "20W-40", pack: "900ml", desc: "Smooth performance engine oil for 4-stroke bikes", tag: "Best Seller", image: imgsmoothworldpromax },
+  { id: 4, name: "World Pro HD", category: "SMOOTH PRO WORLD PRO", grade: "20W-40", pack: "900ml", desc: "Heavy-duty pro engine oil for commercial vehicles", tag: "", image: imgsmoothworldprolp},
 
   // SMOOTHX
   { id: 5, name: "SmoothX Ultra", category: "SMOOTHX", grade: "10W-40", pack: "1L / 4L", desc: "Ultra smooth synthetic blend for high-rev engines", tag: "Premium", image: imgworldridelp },
@@ -63,8 +65,8 @@ const products = [
   { id: 14, name: "Turbo Power Diesel", category: "ULTRA RIDE / TURBO POWER", grade: "15W-40", pack: "5L / 20L", desc: "Turbo-charged diesel protection for commercial engines", tag: "Industrial", image: imgworldridemax },
 
   // SYNTHETIC X
-  { id: 15, name: "Synthetic X LP", category: "SYNTHETIC X", grade: "5W-30", pack: "1L / 4L", desc: "Full synthetic low-viscosity oil for modern engines", tag: "Premium", image: imgSyntheticlp },
-  { id: 16, name: "Synthetic X Max", category: "SYNTHETIC X", grade: "0W-20", pack: "1L / 4L", desc: "Maximum protection full synthetic engine oil", tag: "New", image: imgSyntheticmax },
+  { id: 15, name: "Synthetic X LP", category: "SYNTHETIC X", grade: "15W-50", pack: "2.5L", desc: "Full synthetic low-viscosity oil for modern engines", tag: "Premium", image: imgSyntheticlp },
+  { id: 16, name: "Synthetic X Max", category: "SYNTHETIC X", grade: "15W-50", pack: "2.5L", desc: "Maximum protection full synthetic engine oil", tag: "New", image: imgSyntheticmax },
 ];
 
 const tagColors = {
