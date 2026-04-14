@@ -2,12 +2,12 @@
 
 import React, { useState } from "react";
 import "./Products.css";
-// import imgCushion from "../assets/MAX.png";
-// import imgHD from "../assets/lube_shakti_hd.png";
-// import imgPrince5ltr from "../assets/lube_shakti_prince_5ltr.png";
-// import imgPrince from "../assets/lube_shakti_prince.png";
-// import imgGreese from "../assets/Greese.webp";
-// import imgLpShakti from "../assets/Lpgreese.png";
+import imgCushion from "../assets/MAX.png";
+import imgHD from "../assets/lube_shakti_hd.png";
+import imgPrince5ltr from "../assets/lube_shakti_prince_5ltr.png";
+import imgPrince from "../assets/lube_shakti_prince.png";
+import imgGreese from "../assets/Greese.webp";
+import imgLpShakti from "../assets/Lpgreese.png";
 
 const categories = ["All", "WORLD RIDE", "SMOOTH PRO WORLD PRO", "SMOOTHX", "WORLD POWER", "PREMIUM ", "RIDE PLUS ", "ULTRA RIDE / TURBO POWER","SYNTHETIC X"];
 
