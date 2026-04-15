@@ -3,24 +3,29 @@ import "./Contact.css";
 
 const contactInfo = [
   {
-    title: "Address",
+    title: "Head Office",
     value: "LubePower PVT LTD, SCO 85-86, 1st Floor, 17D, Chandigarh, 160017, India",
-    icon: "\uD83D\uDCCD",
+    icon: "🏢",
+  },
+  {
+    title: "Plant",
+    value: "Plot No. 127, Maruti Industrial Estate, Bardoli Road, Saybe Mill, Jolva, Kadodara, Surat, Gujarat, 394305",
+    icon: "🏭",
   },
   {
     title: "Phone",
     value: "+91 99147-08800",
-    icon: "\uD83D\uDCDE",
+    icon: "📞",
   },
   {
     title: "Email",
     value: "customer@lubepower.in",
-    icon: "\u2709\uFE0F",
+    icon: "✉️",
   },
   {
     title: "Working Hours",
     value: "Mon-Sat: 9:00 AM - 6:00 PM",
-    icon: "\u23F0",
+    icon: "⏰",
   },
 ];
 
